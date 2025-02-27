@@ -33,9 +33,8 @@ Dans cette section, nous allons voir :
 - **L’installation de `kubectl`** : L’outil de gestion des clusters Kubernetes.
 - **L’installation d’un cluster local** : Avec **Minikube, Kind ou K3s**.
 
-👉 **Si vous avez besoin d’un rappel sur les conteneurs**, consultez mon guide
-sur Docker : [Introduction aux conteneurs et
-Docker](https://blog.stephane-robert.info/docs/conteneurs/introduction/)
+👉 **Si vous avez besoin d’un rappel sur les conteneurs**, consultez [mon
+guide](https://blog.stephane-robert.info/docs/conteneurs/introduction/)
 
 ## 🚀 Prochaine étape
 
