@@ -6,7 +6,8 @@ Bienvenue dans ce dépôt dédié à l'apprentissage de Kubernetes à travers de
 un cluster Kubernetes.
 
 Ce dépôt s’appuie sur ma **formation Kubernetes**, actuellement en refonte sur
-mon blog : 👉 [C'est par là](https://blog.stephane-robert.info/docs/conteneurs/orchestrateurs/kubernetes/)
+mon blog : 👉 [C'est par
+là](https://blog.stephane-robert.info/docs/conteneurs/orchestrateurs/kubernetes/)
 
 ## 🎯 Objectifs de la formation
 
@@ -19,17 +20,18 @@ mon blog : 👉 [C'est par là](https://blog.stephane-robert.info/docs/conteneur
 ## 🏗️ Structure du dépôt
 
 - 📂 **00-prerequis/** → Installation des outils et concepts de base
-- 📂 **01-kubernetes-debutant/** → Déploiement et gestion des ressources Kubernetes
+- 📂 **01-kubernetes-debutant/** → Déploiement et gestion des ressources
+  Kubernetes
 - 📂 **02-kubernetes-intermediaire/** → Configuration avancée et montée en
 compétence
-- 📂 **04-kubernetes-avance/** → Fonctions avancées : Helm,
-autoscaling, network policies
+- 📂 **04-kubernetes-avance/** → Fonctions avancées : Helm, autoscaling, network
+policies
 
 Chaque dossier contient des **exercices pratiques** avec des instructions
 détaillées.
 
-Le répertoire `solutions` contient les solutions des exercices pour vous aider
-à valider vos réponses. Bien sûr, il est recommandé de les consulter après avoir
+Le répertoire `solutions` contient les solutions des exercices pour vous aider à
+valider vos réponses. Bien sûr, il est recommandé de les consulter après avoir
 tenté de résoudre les exercices par vous-même.
 
 ## Prêt à commencer ?
@@ -38,7 +40,15 @@ Commencez par [00-prerequis](./00-prerequis/) ! Bonne formation ! 🎯🚀
 
 ## Contribuer
 
-Bien entendu, vous êtes invités à contribuer à ce dépôt en proposant des améliorations
-ou en corrigeant des erreurs. N'hésitez pas à ouvrir une **issue** ou à soumettre
-une **pull request**.
+Bien entendu, vous êtes invités à contribuer à ce dépôt en proposant des
+améliorations ou en corrigeant des erreurs. N'hésitez pas à ouvrir une **issue**
+ou à soumettre une **pull request**.
 
+## Copyright et licence
+
+Tous les contenus contenus dans ce repo sont :
+
+* Copyright ©2025 Stéphane Robert
+* Distribués sous licence Creative Commons BY-SA 4.0 (<https://creativecommons.org/licenses/by-sa/4.0/>)
+
+![Creative Commons BY-SA](https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-sa.png)

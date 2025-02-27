@@ -26,6 +26,8 @@ Kubectl](https://blog.stephane-robert.info/docs/conteneurs/orchestrateurs/outils
 Une fois installé, assurez-vous qu'il est bien configuré et prêt à être utilisé
 en testant la connexion avec votre cluster.
 
+Lisez complètement ce guide avant de passer à l'exercice suivant. Bonne lecture !
+
 ## Vérification de l'installation
 
 Après l’installation, il est important de vérifier que `kubectl` est bien
