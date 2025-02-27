@@ -10,17 +10,17 @@ système est correctement configuré.
 
 ## 🎯 Prérequis pour suivre cette formation
 
-- **Connaissances en conteneurs** :
-  - Avoir une **compréhension de base** des conteneurs.
-  - Savoir créer, gérer et exécuter des **conteneurs Docker**.
-  - Comprendre la construction d’**images de conteneurs** avec un `Dockerfile`.
-
-- **Compétences en ligne de commande** :
+- [**Compétences en ligne de commande**](https://blog.stephane-robert.info/docs/admin-serveurs/linux/introduction/) :
   - Être à l’aise avec un terminal Linux.
   - Connaître les commandes de base (`ls`, `cd`, `mkdir`, `rm`, `cat`, `grep`,
     etc.).
   - Être capable d’exécuter des commandes avec `sudo` et d’éditer des fichiers
     avec `nano` ou `vim`.
+
+- [**Connaissances en conteneurs**](https://blog.stephane-robert.info/docs/conteneurs/introduction/) :
+  - Avoir une **compréhension de base** des conteneurs.
+  - Savoir créer, gérer et exécuter des **conteneurs**.
+  - Comprendre la construction d’**images de conteneurs** avec un `Dockerfile`.
 
 - **Un environnement de développement fonctionnel** :
   - Avoir un système **Linux, macOS ou Windows WSL**.
@@ -43,4 +43,3 @@ Une fois ces outils installés, vous pourrez commencer les exercices pratiques e
 découvrir les bases de Kubernetes à travers des manipulations concrètes.
 
 📌 **Passons maintenant à l’installation des outils !** 🔥
-
