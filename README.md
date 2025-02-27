@@ -36,7 +36,14 @@ tenté de résoudre les exercices par vous-même.
 
 ## Prêt à commencer ?
 
-Commencez par [00-prerequis](./00-prerequis/) ! Bonne formation ! 🎯🚀
+Commencez par cloner ce dépôt sur votre machine locale :
+
+```bash
+git clone https://github.com/stephrobert/kubernetes-training.git
+```
+
+Puis, dans votre ide préféré, ouvrez le dossier `kubernetes-training` et
+commencez par [00-prerequis](./00-prerequis/) ! Bonne formation ! 🎯🚀
 
 ## Contribuer
 
