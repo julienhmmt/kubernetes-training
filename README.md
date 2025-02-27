@@ -61,6 +61,13 @@ Bien entendu, vous êtes invités à contribuer à ce dépôt en proposant des
 améliorations ou en corrigeant des erreurs. N'hésitez pas à ouvrir une **issue**
 ou à soumettre une **pull request**.
 
+## Me soutenir
+
+Si vous appréciez ce travail et souhaitez me soutenir, vous pouvez me payer un
+café ☕️:
+
+[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/stephanerobert89902)
+
 ## Copyright et licence
 
 Tous les contenus contenus dans ce repo sont :
