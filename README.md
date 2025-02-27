@@ -45,6 +45,16 @@ git clone https://github.com/stephrobert/kubernetes-training.git
 Puis, dans votre ide préféré, ouvrez le dossier `kubernetes-training` et
 commencez par [00-prerequis](./00-prerequis/) ! Bonne formation ! 🎯🚀
 
+## Mise à jour du dépôt
+
+Je vais continuer à mettre à jour ce dépôt avec de nouveaux exercices et des
+améliorations. Pour récupérer les dernières modifications, vous pouvez
+simplement exécuter :
+
+```bash
+git pull origin main
+```
+
 ## Contribuer
 
 Bien entendu, vous êtes invités à contribuer à ce dépôt en proposant des
