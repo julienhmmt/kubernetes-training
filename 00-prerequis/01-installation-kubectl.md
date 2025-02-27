@@ -37,4 +37,3 @@ kubectl version
 
 Si tout est correctement configuré, vous devriez voir la version de `kubectl` et
 du serveur Kubernetes s'afficher.
-
