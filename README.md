@@ -48,7 +48,7 @@ ou à soumettre une **pull request**.
 
 Tous les contenus contenus dans ce repo sont :
 
-* Copyright ©2025 Stéphane Robert
-* Distribués sous licence Creative Commons BY-SA 4.0 (<https://creativecommons.org/licenses/by-sa/4.0/>)
+- Copyright ©2025 Stéphane Robert
+- Distribués sous [licence Creative Commons BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
 
 ![Creative Commons BY-SA](https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-sa.png)
