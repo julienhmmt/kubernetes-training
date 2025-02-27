@@ -38,7 +38,7 @@ Commencez par [00-prerequis](./00-prerequis/) ! Bonne formation ! 🎯🚀
 
 ## Contribuer
 
-Bien sûr, vous êtes invités à contribuer à ce dépôt en proposant des améliorations
+Bien entendu, vous êtes invités à contribuer à ce dépôt en proposant des améliorations
 ou en corrigeant des erreurs. N'hésitez pas à ouvrir une **issue** ou à soumettre
 une **pull request**.
 
