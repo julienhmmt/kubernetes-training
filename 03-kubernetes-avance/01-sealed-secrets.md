@@ -20,7 +20,7 @@ contenant la clé privée pourra les déchiffrer.
 
 📖 **Guide associé** :
 👉 [Chiffrer les Secrets Kubernetes avec
-Kubeseal](https://blog.stephane-robert.info/docs/conteneurs/orchestrateurs/kubernetes/sealed-secrets/)
+Kubeseal](https://blog.stephane-robert.info/docs/conteneurs/orchestrateurs/outils/sealed-secrets/)
 
 ## 🏗️ Étape 1 - Vérifier l’environnement
 
