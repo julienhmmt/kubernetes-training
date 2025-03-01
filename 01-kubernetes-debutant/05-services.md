@@ -251,7 +251,6 @@ améliorer la configuration.
 
 3. Supprimez le Service NodePort
 
-
 🚀 **Félicitations !** Vous avez appris à créer et tester des Services dans
 Kubernetes pour exposer des applications de manière stable et sécurisée.
 Continuez à explorer ces concepts et à expérimenter avec `kube-score` et `k9s`
