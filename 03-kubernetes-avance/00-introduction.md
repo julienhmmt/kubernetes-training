@@ -10,9 +10,15 @@ Cette partie couvre des sujets avancés qui vous aideront à renforcer vos
 compétences et à automatiser vos déploiements Kubernetes de manière sécurisée et
 optimisée.
 
+### 🏗️ Provisionnement et configuration de clusters
+
+- 02-vagrant-kubeadm : **Provisionnement de clusters avec vagrant, ansible et
+  kubeadm**. Vouus pourrez ensuite utiliser ces clusters pour les exercices
+  suivants et vous préparer à la certification CKAD ou CKA.
+
 ### 🛡️ Sécurité et gestion des secrets
 
-- **Chiffrement des secrets avec Sealed Secrets (kubeseal)** 🔒
+- 01-sealed-secrets: **Chiffrement des secrets avec Sealed Secrets (kubeseal)** 🔒
 - **RBAC (Role-Based Access Control)** et gestion des permissions
 - **Pod Security Policies et Network Policies**
 

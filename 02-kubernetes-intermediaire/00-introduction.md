@@ -10,7 +10,7 @@ Après avoir découvert les bases de Kubernetes, cette section vous guidera dans
 la mise en place d’environnements plus complexes et **l'automatisation des
 déploiements**.
 
-### Ce que vous apprendrez :
+### Ce que vous apprendrez
 
 ✔️ **Gérer correctement les ressources avec les limits et requests**
 ✔️ **Exposer des services avec les Ingress**
