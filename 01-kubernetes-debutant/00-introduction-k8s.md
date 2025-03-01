@@ -1,4 +1,4 @@
-# Introduction à Kubernetes
+# 🚀 Section Débutant - Training Kubernetes
 
 Kubernetes (ou **K8s**) est un **orchestrateur de conteneurs** permettant
 d’automatiser le déploiement, la gestion et la mise à l’échelle des applications
