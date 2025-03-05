@@ -1,0 +1,232 @@
+# 🛠️ TP - Gestion dynamique du stockage avec les StorageClass
+
+## 🎯 Objectifs
+
+- Comprendre le rôle des **StorageClass** dans Kubernetes.
+- Expérimenter le provisionnement dynamique de volumes persistants.
+- Utiliser un serveur **NFS** pour le stockage et lier un volume à un
+  **déploiement Kubernetes**.
+
+## 📚 Introduction
+
+Dans Kubernetes, une **StorageClass** permet d'automatiser la création et la
+gestion des volumes persistants. Cela simplifie le stockage pour les
+applications, offrant flexibilité et scalabilité. Dans ce TP, nous allons
+utiliser un serveur **NFS** comme backend de stockage et configurer une
+**StorageClass** pour provisionner dynamiquement des volumes.
+
+## 🏰️ Prérequis
+
+Avant de commencer, assurez-vous d'avoir :
+
+- Un cluster Kubernetes fonctionnel (Minikube, K3s, ou monté avec kubeadm).
+- `kubectl` installé et configuré.
+- Un serveur **NFS** en place. (Dans le meme réseau que le cluster)
+
+### Vérification du cluster Kubernetes
+
+Vérifiez que votre cluster est opérationnel avec la commande :
+
+```bash
+kubectl cluster-info
+```
+
+Si le cluster fonctionne, vous verrez une sortie indiquant l'adresse de l'API
+**Kubernetes**.
+
+## 🏢 Étape 1 - Installation d'un serveur NFS
+
+Si vous n'avez pas encore de serveur NFS, vous pouvez en installer un sur une
+machine Ubuntu :
+
+```bash
+sudo apt update
+sudo apt install nfs-server -y
+```
+
+Créez un répertoire partagé :
+
+```bash
+sudo mkdir -p /data
+```
+
+Ajoutez ce partage au fichier **/etc/exports** :
+
+```bash
+echo "/data *(rw,sync,no_subtree_check)" | sudo tee -a /etc/exports
+```
+
+Redémarrez le service NFS :
+
+```bash
+sudo systemctl restart nfs-kernel-server
+```
+
+## 🏡 Étape 2 - Création d'une StorageClass
+
+Créez un fichier **storageclass-nfs.yaml** :
+
+```yaml
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: nfs-csi
+provisioner: nfs.csi.k8s.io
+parameters:
+  server: 192.168.1.100  # Remplacez par l'adresse IP de votre serveur NFS
+  share: /data
+reclaimPolicy: Retain
+volumeBindingMode: Immediate
+allowVolumeExpansion: true
+```
+
+Appliquez cette StorageClass :
+
+```bash
+kubectl apply -f storageclass-nfs.yaml
+```
+
+Vérifiez la StorageClass créée :
+
+```bash
+kubectl get storageclass
+```
+
+## 🛋️ Étape 3 - Création d'un PersistentVolumeClaim
+
+Créez un fichier **pvc-nfs.yaml** :
+
+```yaml
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pvc-nfs
+spec:
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 5Gi
+  storageClassName: nfs-csi
+```
+
+Appliquez le PVC :
+
+```bash
+kubectl apply -f pvc-nfs.yaml
+```
+
+Vérifiez son statut :
+
+```bash
+kubectl get pvc
+```
+
+Le statut doit être **Bound**, indiquant que le PVC est lié à un volume.
+
+## 🌀 Étape 4 - Utilisation du PVC dans un Déploiement
+
+Créez un fichier **deployment-nfs.yaml** :
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nfs-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nfs-app
+  template:
+    metadata:
+      labels:
+        app: nfs-app
+    spec:
+      containers:
+        - name: app
+          image: nginx
+          volumeMounts:
+            - name: storage
+              mountPath: /usr/share/nginx/html
+      volumes:
+        - name: storage
+          persistentVolumeClaim:
+            claimName: pvc-nfs
+```
+
+Appliquez le déploiement :
+
+```bash
+kubectl apply -f deployment-nfs.yaml
+```
+
+Vérifiez les Pods créés :
+
+```bash
+kubectl get pods
+```
+
+## 📊 Étape 5 - Vérification de la persistance des données
+
+Accédez à l'un des Pods et créez un fichier :
+
+```bash
+kubectl exec -it <pod-name> -- /bin/sh
+```
+
+Ajoutez du contenu dans le volume monté :
+
+```sh
+echo "Hello Kubernetes Storage" > /usr/share/nginx/html/index.html
+```
+
+Sortez du Pod et supprimez-le :
+
+```bash
+kubectl delete pod <pod-name>
+```
+
+Créez un nouveau Pod et vérifiez que le fichier est toujours présent :
+
+```bash
+kubectl exec -it <new-pod-name> -- cat /usr/share/nginx/html/index.html
+```
+
+Si le fichier est toujours là, cela prouve que le stockage est persistant.
+
+## 🔧 Dépannage et Debugging
+
+Si vous rencontrez des problèmes, voici quelques commandes utiles :
+
+- Vérifier les événements du PVC :
+
+  ```bash
+  kubectl describe pvc pvc-nfs
+  ```
+
+- Vérifier les logs du driver CSI :
+
+  ```bash
+  kubectl logs -n kube-system -l app=csi-nfs-controller
+  ```
+
+- Vérifier si un volume est bien monté sur un Pod :
+
+  ```bash
+  kubectl exec -it <pod-name> -- df -h
+  ```
+
+## 🏆 Conclusion
+
+Vous avez appris à :
+
+- Créer et configurer une **StorageClass**.
+- Provisionner dynamiquement un **PersistentVolumeClaim**.
+- Lier ce volume à un **déploiement Kubernetes**.
+- Vérifier la persistance des données après la suppression des Pods.
+
+Continuez à explorer en testant d'autres types de stockage comme **GlusterFS**,
+**Ceph** ou **Longhorn** pour adapter votre solution aux besoins de production !
+🚀
+
