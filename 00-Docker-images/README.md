@@ -50,4 +50,4 @@ Chaque dossier contient :
 
 Pour chaque étape, consultez le `README.md` correspondant pour des instructions détaillées.
 
-N'hésitez pas à explorer chaque dossier dans l'ordre pour construire progressivement vos compétences en matière de conteneurisation et de sécurisation des applcations Docker.
+N'hésitez pas à explorer chaque dossier dans l'ordre pour construire progressivement vos compétences en matière de conteneurisation et de sécurisation des applications Docker.
