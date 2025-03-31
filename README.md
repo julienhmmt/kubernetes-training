@@ -4,6 +4,19 @@ Ce dépôt propose un parcours progressif pour comprendre et maîtriser la
 conteneurisation, depuis la création d’images Docker jusqu’à l’orchestration
 avancée avec Kubernetes.
 
+Avant de plonger dans l'univers des conteneurs Docker, il est essentiel de
+comprendre ce qu'est la **containerisation** et comment elle fonctionne. Vous
+pouvez consulter mon [**introduction à la
+containerisation**](https://blog.stephane-robert.info/docs/conteneurs/).
+
+Ce n'est pas un cours, mais plutôt un guide pour vous aider à vous y retrouver
+dans le monde des conteneurs.
+
+Une fois que vous aurez compris les concepts de base, vous pourrez explorer
+l'univers des conteneurs et de l'orchestration. Ce dépôt est conçu pour vous
+permettre de progresser à votre rythme, en vous fournissant des exercices
+pratiques et des exemples concrets.
+
 ## 📚 Organisation du dépôt
 
 - [`00-Docker-images`](./00-Docker-images) — Introduction à Docker et création
