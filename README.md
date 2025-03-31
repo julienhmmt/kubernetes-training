@@ -1,49 +1,41 @@
-# 📘 Formation Kubernetes - Exercices pratiques
+# Conteneurisation - Du Docker aux orchestrateurs
 
-Bienvenue dans ce dépôt dédié à l'apprentissage de Kubernetes à travers des
-**exercices pratiques**. Cette formation progressive vous accompagnera depuis la
-**création d'un premier cluster** jusqu’au **déploiement d’applications** dans
-un cluster Kubernetes.
+Ce dépôt propose un parcours progressif pour comprendre et maîtriser la
+conteneurisation, depuis la création d’images Docker jusqu’à l’orchestration
+avancée avec Kubernetes.
 
-Ce dépôt s’appuie sur ma **formation Kubernetes**, actuellement en refonte sur
-mon blog : 👉 [C'est par
-là](https://blog.stephane-robert.info/docs/conteneurs/orchestrateurs/kubernetes/)
+## 📚 Organisation du dépôt
 
-## 🎯 Objectifs de la formation
+- [`00-Docker-images`](./00-Docker-images) — Introduction à Docker et création
+  d’images personnalisées.
+- [`01-Docker-compose`](./01-Docker-compose) — Composition d’applications
+  multi-conteneurs avec Docker Compose.
+- [`02-Docker-swarm`](./02-Docker-swarm) — Orchestration native de Docker avec
+  Docker Swarm.
+- [`03-Kubernetes`](./03-Kubernetes) — Déploiement et gestion avancée avec
+  Kubernetes.
 
-- **Maîtriser les concepts fondamentaux de Kubernetes** (Pods, Deployments,
-  Services).
-- **Explorer des fonctionnalités avancées** (Volumes, Ingress, ConfigMaps,
-  Secrets).
-- **Découvrir l’automatisation avec CI/CD et GitOps** (GitLab CI, ArgoCD).
+## 🎯 Objectifs
 
-## 🏗️ Structure du dépôt
+- Comprendre les concepts fondamentaux des conteneurs.
+- Créer, gérer et orchestrer des conteneurs dans différents environnements.
+- Fournir des exemples reproductibles et concrets pour l’apprentissage.
 
-- 📂 **00-prerequis/** → Installation des outils et concepts de base
-- 📂 **01-kubernetes-debutant/** → Déploiement et gestion des ressources
-  Kubernetes
-- 📂 **02-kubernetes-intermediaire/** → Configuration avancée et montée en
-compétence
-- 📂 **04-kubernetes-avance/** → Fonctions avancées : Helm, autoscaling, network
-policies
+## 🔧 Prérequis
 
-Chaque dossier contient des **exercices pratiques** avec des instructions
-détaillées.
+- [Docker](https://blog.stephane-robert.info/docs/conteneurs/moteurs-conteneurs/docker/)
+- [Git](https://blog.stephane-robert.info/docs/developper/version/git/introduction/)
+- [Minikube](https://blog.stephane-robert.info/docs/conteneurs/orchestrateurs/minikube/)
+- [Vagrant](https://blog.stephane-robert.info/docs/infra-as-code/provisionnement/vagrant/introduction/)
+  avec VirtualBox ou
+  [KVM](https://blog.stephane-robert.info/docs/virtualiser/type1/kvm/) ou
+  [proxmox](https://blog.stephane-robert.info/docs/virtualiser/type1/kvm/)
+- [Kubectl](https://blog.stephane-robert.info/docs/conteneurs/orchestrateurs/outils/kubectl/)
+  ou autre outil selon le dossier
 
-Le répertoire `solutions` contient les solutions des exercices pour vous aider à
-valider vos réponses. Bien sûr, il est recommandé de les consulter après avoir
-tenté de résoudre les exercices par vous-même.
-
-## Prêt à commencer ?
-
-Commencez par cloner ce dépôt sur votre machine locale :
-
-```bash
-git clone https://github.com/stephrobert/kubernetes-training.git
-```
-
-Puis, dans votre ide préféré, ouvrez le dossier `kubernetes-training` et
-commencez par [00-prerequis](./00-prerequis/) ! Bonne formation ! 🎯🚀
+Ce dépôt est un support d’apprentissage évolutif, n’hésitez pas à proposer des
+améliorations ou à poser des questions via les
+[issues](https://github.com/stephrobert/kubernetes-training/issues).
 
 ## Mise à jour du dépôt
 
