@@ -1,8 +1,8 @@
-# 🐳 00 - Construire un conteneur
+# 🐳 00 - Manipulez des images de conteneurs
 
-Ce dossier vous guide pas à pas pour construire une image Docker de plus en plus
-complexe et sécurisée, basée sur une API minimale développée en Python avec
-FastAPI.
+Ce dossier vous guide pas à pas pour construire et exécutez une image Docker de
+plus en plus complexe et sécurisée, basée sur une API minimale développée en
+Python avec FastAPI.
 
 L'objectif est de maîtriser les bonnes pratiques de construction d'image :
 
@@ -28,7 +28,7 @@ L'objectif est de maîtriser les bonnes pratiques de construction d'image :
     ?
 
 - [**Notions de base sur les
-  conteneurs**](https://blog.stephane-robert.info/docs/conteneurs/introduction/)
+  conteneurs**](https://blog.stephane-robert.info/docs/conteneurs/)
   :
   - Comprendre le principe d’un **conteneur**.
   - Savoir à quoi sert une **image Docker** et comment elle est construite.
@@ -58,16 +58,6 @@ L'objectif est de maîtriser les bonnes pratiques de construction d'image :
 - `04-multistage-build/` : 🏗️ Mise en œuvre d'une construction multi-étapes
   pour optimiser la taille et la sécurité de l'image finale.
 
-## 🛠️ Prérequis
-
-Avant de commencer, assurez-vous d'avoir installé les outils suivants :
-
-- 🐳 [Docker](https://blog.stephane-robert.info/docs/conteneurs/moteurs-conteneurs/docker/)
-- 🐍 [Python
-  3](https://blog.stephane-robert.info/docs/developper/programmation/python/)
-- 🔍 [Trivy](https://blog.stephane-robert.info/docs/securiser/outils/trivy/)
-  pour l'analyse de vulnérabilités
-
 ## 📖 Instructions générales
 
 Chaque dossier contient :
@@ -77,7 +67,7 @@ Chaque dossier contient :
 - 📝 Un fichier `README.md` détaillant les objectifs, les instructions de
   construction et d'exécution, ainsi que les points d'apprentissage spécifiques.
 
-Pour chaque étape, consultez le `README.md` correspondant pour des instructions
+Pour chaque étape, consultez le fichier markdown pour des instructions
 détaillées.
 
 N'hésitez pas à explorer chaque dossier dans l'ordre pour construire
