@@ -18,7 +18,6 @@ de cette base pour l’optimiser.
 │   └── requirements.txt
 ├── .dockerignore
 ├── dockerfile
-└── README.md
 ```
 
 ## Etape 0 - On fait le point
