@@ -52,13 +52,10 @@ L'objectif est de maîtriser les bonnes pratiques de construction d'image :
 - `01-debian12-basique/` : 🐧 Création d'une image Docker basique basée sur
   Debian 12.
 - `02-debian12-optimisee/` : 📉 Optimisation de l'image Debian 12 en réduisant
-  sa taille avec un fichier `.dockerignore` et analyse de la surface d'attaque
-  avec Trivy.
+  sa taille avec un fichier `.dockerignore`.
 - `03-alpine/` : 🏔️ Migration vers une image Alpine Linux pour une empreinte
-  plus légère et nouvelle analyse avec Trivy.
-- `04-wolfi-os/` : 🐺 Utilisation de Wolfi OS comme base pour l'image Docker et
-  évaluation de sa sécurité.
-- `05-multistage-build/` : 🏗️ Mise en œuvre d'une construction multi-étapes
+  plus légère et analyse des images avec Trivy.
+- `04-multistage-build/` : 🏗️ Mise en œuvre d'une construction multi-étapes
   pour optimiser la taille et la sécurité de l'image finale.
 
 ## 🛠️ Prérequis
