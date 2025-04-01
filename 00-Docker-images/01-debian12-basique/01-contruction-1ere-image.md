@@ -377,6 +377,15 @@ docker system prune -a
 🔺 Supprime **toutes les images non utilisées**, les conteneurs arrêtés, et les
 volumes anonymes. À utiliser avec prudence.
 
+## 🧠 Ce que vous avez appris
+
+Vous avez appris à :
+
+- Créer une image Docker à partir de Debian 12.
+- Installer Python et pip dans l’image.
+- Ajouter une application FastAPI et ses dépendances.
+- Lancer l’application automatiquement au démarrage du conteneur.
+
 ## 🎯 **Bonus : Challenge**
 
 - Testez une version modifiée de votre `dockerfile` sans nettoyage (`apt-get
