@@ -4,7 +4,7 @@
 
 - Comprendre comment construire une **image Docker** à partir de **Debian 12**.
 - Containeriser une **application FastAPI minimale**.
-- Apprendre les bases du `Dockerfile` et du processus de build.
+- Apprendre les bases du `dockerfile` et du processus de build.
 - Lancer et tester un conteneur localement.
 
 👉 Avant de commencer, assurez-vous d’avoir Docker installé sur votre machine :
@@ -49,33 +49,33 @@ pip3 --version
 ```
 
 ✅ Vous avez maintenant un environnement Python prêt. Il est temps de commencer à
-écrire votre premier `Dockerfile` !
+écrire votre premier `dockerfile` !
 
-## 🛠️ Étape 3 - Commencer à écrire le Dockerfile
+## 🛠️ Étape 3 - Commencer à écrire le dockerfile
 
 Maintenant que vous avez testé manuellement ce qu’il faut pour faire fonctionner
 votre application Python dans un conteneur Debian, vous allez commencer à écrire
-votre **Dockerfile**.
+votre **dockerfile**.
 
-📌 Créez un fichier appelé `Dockerfile` à la racine de votre projet, à côté du
+📌 Créez un fichier appelé `dockerfile` à la racine de votre projet, à côté du
 dossier `app/`.
 
 ### 🧱 1. Définir l’image de base
 
-```Dockerfile
+```dockerfile
 FROM debian:12
 ```
 
-🧠 Cela signifie : ➡️ On part d’un système Debian 12 minimal comme fondation.
+🧠 Cela signifie : On part d’un système Debian 12 minimal comme fondation.
 
 ### ⚙️ 2. Installer Python et pip
 
-Ajoutez cette ligne pour installer les outils nécessaires :
+Ajoutez ces lignes pour installer les outils nécessaires :
 
-```Dockerfile
-RUN apt-get update && \
-    apt-get install -y python3 python3-pip && \
-    apt-get clean && rm -rf /var/lib/apt/lists/*
+```dockerfile
+RUN apt-get update
+RUN apt-get install -y python3 python3-pip
+RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 ```
 
 🧠 Décomposition :
@@ -128,7 +128,7 @@ Voici comment sont organisés vos fichiers :
 ├── app/
 │   ├── main.py
 │   └── requirements.txt
-└── Dockerfile
+└── dockerfile
 ```
 
 ✅ Vérifiez bien que vous avez un dossier `app/` contenant :
@@ -137,11 +137,11 @@ Voici comment sont organisés vos fichiers :
 - `requirements.txt` : liste des dépendances Python (`fastapi`,
   `uvicorn[standard]`)
 
-### ✍️ 2. Ajouter les instructions dans le Dockerfile
+### ✍️ 2. Ajouter les instructions dans le dockerfile
 
 Ajoutez ces lignes **sous les précédentes** :
 
-```Dockerfile
+```dockerfile
 # Définir le répertoire de travail
 WORKDIR /app
 
@@ -159,7 +159,7 @@ COPY app/ /app/
 
 Ajoutez juste après :
 
-```Dockerfile
+```dockerfile
 RUN pip3 install --no-cache-dir --break-system-packages -r requirements.txt
 ```
 
@@ -205,9 +205,9 @@ manuelle.
 
 ### 🧾 1. Ajouter une commande de démarrage avec `CMD`
 
-Ajoutez cette ligne **à la fin du Dockerfile** :
+Ajoutez cette ligne **à la fin du dockerfile** :
 
-```Dockerfile
+```dockerfile
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
 ```
 
@@ -221,7 +221,7 @@ CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
 
 ### 🔁 2. Rebuild de l’image
 
-Chaque fois que vous modifiez le `Dockerfile`, vous devez reconstruire l’image :
+Chaque fois que vous modifiez le `dockerfile`, vous devez reconstruire l’image :
 
 ```bash
 docker build -t fastapi-auto .
@@ -262,7 +262,7 @@ commandes de base** pour travailler efficacement avec les images et conteneurs.
 ### 📚 1. Comment fonctionne une image Docker ?
 
 Une image Docker est composée de **couches** (layers). Chaque instruction du
-`Dockerfile` (comme `RUN`, `COPY`, etc.) crée une **nouvelle couche**.
+`dockerfile` (comme `RUN`, `COPY`, etc.) crée une **nouvelle couche**.
 
 🧠 Ces couches sont :
 
@@ -379,7 +379,7 @@ volumes anonymes. À utiliser avec prudence.
 
 ## 🎯 **Bonus : Challenge**
 
-- Testez une version modifiée de votre `Dockerfile` sans nettoyage (`apt-get
+- Testez une version modifiée de votre `dockerfile` sans nettoyage (`apt-get
   clean`, etc.)
 - Comparez la taille avec `docker images`
 - Lancez `dive` sur les deux versions pour visualiser l’impact
