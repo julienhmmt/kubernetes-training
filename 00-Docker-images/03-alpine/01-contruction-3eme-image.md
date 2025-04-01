@@ -140,7 +140,7 @@ trivy image --severity HIGH,CRITICAL fastapi-alpine
 
 ## 🧠 Ce que vous avez appris
 
-Tu as appris à :
+Vous avez appris à :
 
 - Migrer une image Docker de Debian vers Alpine Linux.
 - Installer Python et ses dépendances avec `apk`.
