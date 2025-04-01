@@ -10,7 +10,7 @@ WORKDIR /app
 COPY app/ /app/
 
 # Installation des dépendances Python
-RUN pip3 install -r requirements.txt
+RUN pip3 install --break-system-packages -r requirements.txt
 
 # Exposition du port de l’API
 EXPOSE 8000
