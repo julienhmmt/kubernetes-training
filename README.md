@@ -19,8 +19,8 @@ pratiques et des exemples concrets.
 
 ## 📚 Organisation du dépôt
 
-- [`00-Docker-images`](./00-Docker-images) — Introduction à Docker et création
-  d’images personnalisées.
+- [`00-Docker`](./00-Docker-images) — Introduction à Docker, création
+  d’images personnalisées, utilisations des volumes et des réseaux.
 - [`01-Docker-compose`](./01-Docker-compose) — Composition d’applications
   multi-conteneurs avec Docker Compose.
 - [`02-Docker-swarm`](./02-Docker-swarm) — Orchestration native de Docker avec
