@@ -57,6 +57,8 @@ L'objectif est de maîtriser les bonnes pratiques de construction d'image :
   plus légère et analyse des images avec Trivy.
 - `04-multistage-build/` : 🏗️ Mise en œuvre d'une construction multi-étapes
   pour optimiser la taille et la sécurité de l'image finale.
+- `05-volumes/` : 📦 Utilisation de volumes Docker pour la persistance des
+  données et la gestion des fichiers de configuration.
 
 ## 📖 Instructions générales
 
