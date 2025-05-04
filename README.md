@@ -66,6 +66,8 @@ Bien entendu, vous êtes invités à contribuer à ce dépôt en proposant des
 améliorations ou en corrigeant des erreurs. N'hésitez pas à ouvrir une **issue**
 ou à soumettre une **pull request**.
 
+Plus d'infos [ici](https://github.com/stephrobert/containers-training/blob/main/contributing.md)
+
 ## Me soutenir
 
 Si vous appréciez ce travail et souhaitez me soutenir, vous pouvez me payer un
